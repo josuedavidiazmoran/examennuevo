@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ventas</title>
+    <link rel="stylesheet" href="examen.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!---->
+
+<body>
+    <div class="header">
+        <div id="logo"><img src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-logo-500x281.png" alt=""></div>
+        <div id="banner">Sistema de Ventas</div>
+    </div>
+
+    <div class="container">
+        <div class="form">
+            <div class="lado">
+                <input type="date" placeholder="Fecha" class="caja" id="cliente">
+                <select name="combo" id="doc" class="caja">
+                    <option value="0">Cliente</option>
+                    <option value="FACTURA">Estudiante</option>
+                    <option value="BOLETA">Profesor</option>
+                    <option value="BOLETA">Personal</option>
+                </select>
+                <select name="producto" id="prod" class="caja">
+                    <option value="0">Seleccionar Producto</option>
+                    <option value="ACEITE">Lacteos</option>
+                    <option value="LECHE">Menestras</option>
+                    <option value="LECHE">Abarrotes</option>
+                </select>
+                <input type="text" placeholder="Precio" class="caja" id="precio">
+                <input type="text" placeholder="Cantidad" class="caja" id="cant">
+                <button class="boton" onclick="guardar()">Agregar</button>
+            </div>
+        </div>
+        <div class="datos">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>AcciÃ³n</th>
+                    </tr>
+                </thead>
+                <tbody id="tbd">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="examen.js"></script>
+</body>
+
+</html>
