@@ -5,7 +5,7 @@ var precio = document.getElementById("precio");
 var prod = document.getElementById("prod");
 var table = document.getElementById("table");
 var tbd = document.getElementById("tbd");
-var filita = "";
+var filaw = "";
 var estado = 0;
 function guardar() {
     if (estado == 0) {
@@ -15,15 +15,12 @@ function guardar() {
         console.log(cliente.value)
         var celda_cliente = document.createElement("td");
         celda_cliente.innerHTML = cliente.value;
-
         //documento
         var celda_doc = document.createElement("td");
         celda_doc.innerHTML = doc.value;
-
         //Producto
         var celda_producto = document.createElement("td");
         celda_producto.innerHTML = prod.value;
-
         //cantidad
         var celda_cantidad = document.createElement("td");
         celda_cantidad.innerHTML = cant.value;
@@ -45,11 +42,11 @@ function guardar() {
         table.appendChild(tbd);
         limpiar();
     } else {
-        filita.cells[0].innerHTML = cliente.value;
-        filita.cells[1].innerHTML = doc.value;
-        filita.cells[2].innerHTML = prod.value;
-        filita.cells[3].innerHTML = cant.value;
-        filita.cells[4].innerHTML = precio.value;
+        filaw.cells[0].innerHTML = cliente.value;
+        filaw.cells[1].innerHTML = doc.value;
+        filaw.cells[2].innerHTML = prod.value;
+        filaw.cells[3].innerHTML = cant.value;
+        filaw.cells[4].innerHTML = precio.value;
         limpiar();
         estado = 0;
     }
@@ -60,12 +57,12 @@ function eliminar(row) {
     fil.parentNode.removeChild(fil);
 }
 function editar(row) {
-    filita = row.parentNode.parentNode;
-    cliente.value = filita.cells[0].innerHTML;
-    doc.value = filita.cells[1].innerHTML;
-    prod.value = filita.cells[2].innerHTML;
-    cant.value = filita.cells[3].innerHTML;
-    precio.value = filita.cells[4].innerHTML;
+    filaw = row.parentNode.parentNode;
+    cliente.value = filaw.cells[0].innerHTML;
+    doc.value = filaw.cells[1].innerHTML;
+    prod.value = filaw.cells[2].innerHTML;
+    cant.value = filaw.cells[3].innerHTML;
+    precio.value = filaw.cells[4].innerHTML;
     estado = 1;
 }
 function limpiar() {
